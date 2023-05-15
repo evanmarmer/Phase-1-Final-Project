@@ -9,8 +9,9 @@ getAllSeasons()
 // asynchronous function (promise) that allows the rest of the code to be loaded before the response (data retrieval) from the json server happens
 
 
-// function displaySeasons(seasons){
-    // console.log(seasons)
-// }
-const header = document.createElement('h1')
-header.textContent = "hello"
+
+
+
+
+
+
