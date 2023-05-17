@@ -14,13 +14,15 @@ function renderCard(season){
     seasonCard.classname = 'card'
     seasonCard.innerHTML = `
     <img src="${season.image.original}">
+    <div class="likes-section">
+        <span class="likes">0 likes</span>
+        <button class="like">Like</button>
+    </div>
     <div class ="content">
-        <button id="like-button">Like</button>
         <h1>Season ${season.number}</h1>
         <h2>Premier Date ${season.premiereDate}</h2>
         <input type="text" id="comment-box" placeholder="Enter comment">
         <button id="post">Post</button>
-        
     </div>
     `
     
