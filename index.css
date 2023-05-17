@@ -2,17 +2,18 @@ body {
     margin: 0;
     font-family: monospace;
   }
+  /* Change font */
 
   #season-list {
     text-align: center;
   }
+  /* Center cards */
   
   #season-list img {
     height: 40rem;
     width: auto;
   }
+  /* Resize images to be the same */
 
  
-   
-
   

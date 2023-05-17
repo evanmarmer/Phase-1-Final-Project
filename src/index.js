@@ -15,11 +15,19 @@ function renderCard(season){
     seasonCard.innerHTML = `
     <img src="${season.image.original}">
     <div class ="content">
+        <button id="like-button">Like</button>
         <h1>Season ${season.number}</h1>
         <h2>Premier Date ${season.premiereDate}</h2>
-        </div>
+        <input type="text" id="comment-box" placeholder="Enter comment">
+        <button id="post">Post</button>
+        
+    </div>
     `
+    
     document.querySelector('#season-list').appendChild(seasonCard)
+
+    
+    
 }
 
 
