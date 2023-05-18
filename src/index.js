@@ -13,7 +13,9 @@ function renderCard(season){
     const seasonCard = document.createElement('div')
     seasonCard.className = 'card'
     seasonCard.innerHTML = `
-    <img src="${season.image.original}">
+    <div class="image-container">
+        <img src="${season.image.original}">
+    </div>
     <div class="likes-section">
         <span class="likes">0 likes</span>
         <button id="like">Like</button>
@@ -56,6 +58,19 @@ function renderCard(season){
         }
       });
     
+      // Get the season image element
+  const seasonImage = seasonCard.querySelector('.image-container img');
+
+  // Add event listener to enlarge the image on mouseover
+  seasonImage.addEventListener('mouseover', () => {
+    seasonImage.style.transform = 'scale(1.8)';
+  });
+
+  // Reset the image size on mouseout
+  seasonImage.addEventListener('mouseout', () => {
+    seasonImage.style.transform = 'scale(1)';
+  });
+
 }
 
 
