@@ -16,7 +16,7 @@ function renderCard(season){
     <img src="${season.image.original}">
     <div class="likes-section">
         <span class="likes">0 likes</span>
-        <button class="like">Like</button>
+        <button id="like">Like</button>
     </div>
     <div class ="content">
         <h1>Season ${season.number}</h1>
