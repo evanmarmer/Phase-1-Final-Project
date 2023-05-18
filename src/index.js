@@ -11,7 +11,7 @@ getAllSeasons()
 function renderCard(season){
     // console.log(season)
     const seasonCard = document.createElement('div')
-    seasonCard.classname = 'card'
+    seasonCard.className = 'card'
     seasonCard.innerHTML = `
     <img src="${season.image.original}">
     <div class="likes-section">
@@ -32,6 +32,12 @@ function renderCard(season){
 
     let likesCounter = seasonCard.querySelector('.likes')
     let likesButton = seasonCard.querySelector('button')
+    let commentBox = seasonCard.querySelector('#comment-box');
+  let postButton = seasonCard.querySelector('#post');
+  let commentsSection = document.createElement('div');
+  commentsSection.className = 'comments-section';
+  seasonCard.appendChild(commentsSection);
+
 
    let likes = 0
 
@@ -40,10 +46,18 @@ function renderCard(season){
         likesCounter.innerText = likes
     })
 
-    }
+    postButton.addEventListener('click', () => {
+        const comment = commentBox.value;
+        if (comment) {
+          const commentElement = document.createElement('p');
+          commentElement.innerText = comment;
+          commentsSection.appendChild(commentElement);
+          commentBox.value = '';
+        }
+      });
+    
+}
 
-    
-    
 
 function displaySeasons(seasons){
     // console.log(seasons)
