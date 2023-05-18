@@ -21,6 +21,8 @@ function renderCard(season){
     <div class ="content">
         <h1>Season ${season.number}</h1>
         <h2>Premier Date: ${season.premiereDate}</h2>
+    </div>
+    <div class="comments">
         <input type="text" id="comment-box" placeholder="Enter comment">
         <button id="post">Post</button>
     </div>
