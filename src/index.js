@@ -26,7 +26,6 @@ function renderCard(season){
     </div>
     <div class="comments">
         <input type="text" id="comment-box" placeholder="Enter comment">
-        <button id="post">Post</button>
     </div>
     `
     
@@ -48,15 +47,18 @@ function renderCard(season){
         likesCounter.innerText = likes
     })
 
-    postButton.addEventListener('click', () => {
-        const comment = commentBox.value;
-        if (comment) {
-          const commentElement = document.createElement('p');
-          commentElement.innerText = comment;
-          commentsSection.appendChild(commentElement);
-          commentBox.value = '';
+    commentBox.addEventListener('keydown', (event) => {
+        if (event.key === 'Enter') {
+          const comment = commentBox.value;
+          if (comment) {
+            const commentElement = document.createElement('p');
+            commentElement.innerText = comment;
+            commentsSection.appendChild(commentElement);
+            commentBox.value = '';
+          }
         }
       });
+
     
       // Get the season image element
   const seasonImage = seasonCard.querySelector('.image-container img');
