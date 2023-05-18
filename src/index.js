@@ -20,7 +20,7 @@ function renderCard(season){
     </div>
     <div class ="content">
         <h1>Season ${season.number}</h1>
-        <h2>Premier Date ${season.premiereDate}</h2>
+        <h2>Premier Date: ${season.premiereDate}</h2>
         <input type="text" id="comment-box" placeholder="Enter comment">
         <button id="post">Post</button>
     </div>
@@ -28,10 +28,20 @@ function renderCard(season){
     
     document.querySelector('#season-list').appendChild(seasonCard)
 
-    
-    
-}
+    let likesCounter = seasonCard.querySelector('.likes')
+    let likesButton = seasonCard.querySelector('button')
 
+   let likes = 0
+
+    likesButton.addEventListener('click', () => {
+        likes++
+        likesCounter.innerText = likes
+    })
+
+    }
+
+    
+    
 
 function displaySeasons(seasons){
     // console.log(seasons)
