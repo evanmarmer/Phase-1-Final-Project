@@ -15,10 +15,6 @@ body {
   }
   /* Resize images to be the same */
 
-    
-    #post:hover{
-        background-color: red;
-    }
 
     #like:hover{
         background-color: red;
