@@ -24,5 +24,6 @@ body {
     margin-bottom: 40px;
     border: 20px solid black;
     border-radius: 4px;
+    background-color: grey;
   }
-  /* Margins between cards larger & boarder added */
+  /* Margins between cards larger, boarder added, background color added  */
