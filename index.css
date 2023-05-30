@@ -6,6 +6,9 @@ body {
 
   #season-list {
     text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
   }
   /* Center cards */
   
@@ -25,5 +28,12 @@ body {
     border: 20px solid black;
     border-radius: 4px;
     background-color: grey;
+    flex-basis: 100%;
+    max-width: 600px;
   }
   /* Margins between cards larger, boarder added, background color added  */
+
+  .card:nth-child(even) {
+    margin-left: auto;
+    margin-right: auto;
+  }
