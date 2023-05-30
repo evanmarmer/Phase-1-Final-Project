@@ -15,8 +15,12 @@ body {
   }
   /* Resize images to be the same */
 
-
     #like:hover{
         background-color: red;
     }
-  
+  /* like button red when hover */
+
+  .card {
+    margin-bottom: 40px;
+  }
+  /* Margins between cards larger */
