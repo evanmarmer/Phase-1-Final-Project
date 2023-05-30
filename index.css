@@ -22,5 +22,7 @@ body {
 
   .card {
     margin-bottom: 40px;
+    border: 20px solid black;
+    border-radius: 4px;
   }
-  /* Margins between cards larger */
+  /* Margins between cards larger & boarder added */
