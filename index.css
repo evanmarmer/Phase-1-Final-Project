@@ -1,4 +1,4 @@
-body {
+  body {
     margin: 0;
     font-family: monospace;
     display: flex;
@@ -6,7 +6,12 @@ body {
     align-items: center;
   }
   /* Change font */
-
+  /* Sets the margin of the body to 0, removing any default spacing */
+  /* Specifies the font family to be used for the text */
+  /* Sets the body to display as a flex container */
+  /* Centers the content horizontally within the body */
+  /* Centers the content vertically within the body */
+  
   #season-list {
     text-align: center;
     display: flex;
@@ -14,18 +19,25 @@ body {
     justify-content: center;
   }
   /* Center cards */
+  /* Centers the text within the season-list container */
+  /* Sets the season-list container to display as a flex container */
+  /* Allows the cards to wrap to the next line if there is not enough space */
+  /* Centers the cards horizontally within the season-list container */
   
   #season-list img {
-    height: 40rem;
+    height: 30rem;
     width: auto;
   }
   /* Resize images to be the same */
-
-    #like:hover{
-        background-color: red;
-    }
+  /* Sets the height of the images to 30rem (pixels), maintaining the aspect ratio */
+  /* Automatically adjusts the width of the images to maintain the aspect ratio */
+  
+  #like:hover {
+    background-color: red;
+  }
   /* like button red when hover */
-
+  /* Changes the background color of the element with the id 'like' when hovered over */
+  
   .card {
     margin-bottom: 40px;
     border: 20px solid black;
@@ -34,9 +46,16 @@ body {
     flex-basis: 100%;
     max-width: 600px;
   }
-  /* Margins between cards larger, boarder added, background color added  */
-
+  /* Margins between cards larger, boarder added, background color added */
+  /* Adds a bottom margin of 40px to each card */
+  /* Sets a 20px solid black border for each card */
+  /* Adds rounded corners to the cards with a radius of 4px */
+  /* Sets the background color of the cards to grey */
+  /* Sets the flex basis (initial size) of the cards to occupy the full width of the container */
+  /* Sets the maximum width of the cards to 600px */
+  
   .card:nth-child(even) {
     margin-left: auto;
     margin-right: auto;
   }
+  /* Centers the even numbered cards horizontally within their container */
