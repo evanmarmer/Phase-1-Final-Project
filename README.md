@@ -1,7 +1,10 @@
 # Sons Of Anarchy Seasons App
-Sons Of Anarchy Seasons App is a web application that provides users with the ability to see and interact with one of their favorite tv shows. The app shows the user all of the seasons, premier dates, and an image of each season. It also shows allows the user to like or comment on a season.
+Sons Of Anarchy Seasons App is a web application that provides users with the ability to see and interact with one of their favorite tv shows. The app shows the user all the seasons, premier dates, and an image of each season. It also allows the user to like or comment on a season along with seeing an enlarged photo of each season.
 
 ## Instalation
+
+
+## License 
 
 ## Usage
 View information about each season.
@@ -14,9 +17,6 @@ Pull requests are welcome. For major changes, please open an issue first
 to discuss what you would like to change.
 
 Please make sure to update tests as appropriate.
-
-## License 
-MIT
 
 ## Achknowledgements
 The TV show and season data is fetched from the TV Seasons API http://localhost:3000/seasons

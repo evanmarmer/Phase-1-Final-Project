@@ -3,8 +3,10 @@ const sonsUrl = "http://localhost:3000/seasons"
 function getAllSeasons() {
     fetch(sonsUrl) // fetch data from sonsUrl API endpoint
         .then(res => res.json()) // convert to JSON format
-        .then(data => displaySeasons(data)) // pass data to desplaySeasons function 
-}
+        .then(data => {
+            displaySeasons(data)  // pass data to displaySeasons function 
+        }) 
+    }
 
 getAllSeasons() // asynchronous function (promise) that allows the rest of the code to be loaded before the response (data retrieval) from the json server happens
 
@@ -27,16 +29,16 @@ function renderCard(season) { // function for rendering a card for each season
     </div>
     <div class="comments">
         <input type="text" id="comment-box" placeholder="Enter Comment">
-    </div>
+    </div> 
     `
 
     document.querySelector('#season-list').appendChild(seasonCard) // append the card to the DOM
 
     // create reference to varios elements for the seasonCard
-    let likesCounter = seasonCard.querySelector('.likes')
-    let likesButton = seasonCard.querySelector('button')
-    let commentBox = seasonCard.querySelector('#comment-box');
-    let commentsSection = document.createElement('div');
+    const likesCounter = seasonCard.querySelector('.likes')
+    const likesButton = seasonCard.querySelector('button')
+    const commentBox = seasonCard.querySelector('#comment-box');
+    const commentsSection = document.createElement('div');
     commentsSection.className = 'comments-section';
     seasonCard.appendChild(commentsSection);
 
@@ -59,8 +61,7 @@ function renderCard(season) { // function for rendering a card for each season
             }
         }
     });
-
-
+   
     // Get the season image element
     const seasonImage = seasonCard.querySelector('.image-container img');
 
@@ -84,5 +85,9 @@ function displaySeasons(seasons) {
         // console.log(season)
     })
 }
+
+
+
+
 
 

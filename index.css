@@ -25,7 +25,7 @@
   /* Centers the cards horizontally within the season-list container */
   
   #season-list img {
-    height: 30rem;
+    height: 40rem;
     width: auto;
   }
   /* Resize images to be the same */
@@ -43,19 +43,14 @@
     border: 20px solid black;
     border-radius: 4px;
     background-color: grey;
-    flex-basis: 100%;
-    max-width: 600px;
+    flex-basis: 50%;
+    max-width: 50%;
   }
   /* Margins between cards larger, boarder added, background color added */
   /* Adds a bottom margin of 40px to each card */
   /* Sets a 20px solid black border for each card */
   /* Adds rounded corners to the cards with a radius of 4px */
   /* Sets the background color of the cards to grey */
-  /* Sets the flex basis (initial size) of the cards to occupy the full width of the container */
-  /* Sets the maximum width of the cards to 600px */
+  /* Sets the flex basis (initial size) of the cards to occupy 50% of the container */
+  /* Sets the maximum width of the cards to 50% of the container*/
   
-  .card:nth-child(even) {
-    margin-left: auto;
-    margin-right: auto;
-  }
-  /* Centers the even numbered cards horizontally within their container */
