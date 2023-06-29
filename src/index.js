@@ -7,9 +7,14 @@ function getAllSeasons() {
             displaySeasons(data)  
         }) 
     }
-
-getAllSeasons() 
-
+    
+    getAllSeasons() 
+    
+    function displaySeasons(seasons) {
+        seasons.forEach(season => { 
+            renderCard(season) 
+        })
+    }
 
 function renderCard(season) { 
     const seasonCard = document.createElement('div') 
@@ -39,7 +44,6 @@ function renderCard(season) {
     const commentsSection = document.createElement('div');
     commentsSection.className = 'comments-section';
     seasonCard.appendChild(commentsSection);
-
 
     let likes = 0
 
@@ -73,11 +77,6 @@ function renderCard(season) {
 }
 
 
-function displaySeasons(seasons) {
-    seasons.forEach(season => { 
-        renderCard(season) 
-    })
-}
 
 
 
