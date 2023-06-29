@@ -1,20 +1,19 @@
 const sonsUrl = "http://localhost:3000/seasons"
 
 function getAllSeasons() {
-    fetch(sonsUrl) // fetch data from sonsUrl API endpoint
-        .then(res => res.json()) // convert to JSON format
+    fetch(sonsUrl) 
+        .then(res => res.json()) 
         .then(data => {
-            displaySeasons(data)  // pass data to displaySeasons function 
+            displaySeasons(data)  
         }) 
     }
 
-getAllSeasons() // asynchronous function (promise) that allows the rest of the code to be loaded before the response (data retrieval) from the json server happens
+getAllSeasons() 
 
 
-function renderCard(season) { // function for rendering a card for each season
-    const seasonCard = document.createElement('div') // create a new div for the card
-    seasonCard.className = 'card' // assign 'card' class to seasonCard
-    // set inner HTML using template literal
+function renderCard(season) { 
+    const seasonCard = document.createElement('div') 
+    seasonCard.className = 'card' 
     seasonCard.innerHTML = ` 
     <div class="image-container">
         <img src="${season.image.original}">
@@ -32,9 +31,8 @@ function renderCard(season) { // function for rendering a card for each season
     </div> 
     `
 
-    document.querySelector('#season-list').appendChild(seasonCard) // append the card to the DOM
+    document.querySelector('#season-list').appendChild(seasonCard) 
 
-    // create reference to varios elements for the seasonCard
     const likesCounter = seasonCard.querySelector('.likes')
     const likesButton = seasonCard.querySelector('button')
     const commentBox = seasonCard.querySelector('#comment-box');
@@ -45,32 +43,29 @@ function renderCard(season) { // function for rendering a card for each season
 
     let likes = 0
 
-    likesButton.addEventListener('click', () => { // add event listener to like button
-        likes++ // increment likes counter
-        likesCounter.innerText = likes // update likes counter text
+    likesButton.addEventListener('click', () => { 
+        likes++ 
+        likesCounter.innerText = likes 
     })
 
-    commentBox.addEventListener('keydown', (event) => { // add event listener to comment box for 'enter' key
+    commentBox.addEventListener('keydown', (event) => { 
         if (event.key === 'Enter') {
             const comment = commentBox.value;
             if (comment) {
-                const commentElement = document.createElement('p'); // create a new p element for the comment
-                commentElement.innerText = comment; // set inner text to comment
-                commentsSection.appendChild(commentElement); // apend comment to comments section
-                commentBox.value = ''; // clear the comment box
+                const commentElement = document.createElement('p'); 
+                commentElement.innerText = comment; 
+                commentsSection.appendChild(commentElement); 
+                commentBox.value = ''; 
             }
         }
     });
    
-    // Get the season image element
     const seasonImage = seasonCard.querySelector('.image-container img');
 
-    // Add event listener to enlarge the image on mouseover
     seasonImage.addEventListener('mouseover', () => {
         seasonImage.style.transform = 'scale(1.8)';
     });
 
-    // Reset the image size on mouseout
     seasonImage.addEventListener('mouseout', () => {
         seasonImage.style.transform = 'scale(1)';
     });
@@ -79,10 +74,8 @@ function renderCard(season) { // function for rendering a card for each season
 
 
 function displaySeasons(seasons) {
-    // console.log(seasons)
-    seasons.forEach(season => { // iterate through each season in seasons array
-        renderCard(season) // render each season card 
-        // console.log(season)
+    seasons.forEach(season => { 
+        renderCard(season) 
     })
 }
 
